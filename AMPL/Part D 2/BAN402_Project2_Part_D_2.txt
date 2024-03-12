@@ -1,0 +1,19 @@
+The maximum emergency score is 1460
+
+Emergency Score truck 1: 420
+Emergency Score truck 2: 250
+Emergency Score truck 3: 370
+Emergency Score truck 4: 420
+
+Operation Center for truck 1: S2
+Trip for truck 1: from S2 --> C5, from C5 --> S3, from S3 --> N2, from N2 --> S2
+
+Operation Center for truck 2: C1
+Trip for truck 2: from C1 --> C3, from C3 --> N4, from N4 --> N3, from N3 --> C1
+
+Operation Center for truck 3: C2
+Trip for truck 3: from C2 --> C4, from C4 --> S5, from S5 --> N5, from N5 --> C2
+
+Operation Center for truck 4: S4
+Trip for truck 4: from S4 --> C6, from C6 --> S1, from S1 --> N1, from N1 --> S4
+

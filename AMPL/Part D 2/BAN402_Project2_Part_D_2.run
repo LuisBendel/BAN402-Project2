@@ -1,0 +1,58 @@
+reset;
+model BAN402_Project2_Part_D_2.mod;
+data BAN402_Project2_Part_D_2.dat;
+
+option solver gurobi;
+
+solve;
+#option display_width 80;
+display EScore;
+display x;
+display y;
+display u;
+
+print "The maximum emergency score is " & EScore > BAN402_Project2_Part_D_2.txt;
+print "" > BAN402_Project2_Part_D_2.txt;
+
+param EScoreK symbolic;
+param EScoreK_sum;
+for{k in K}{
+	let EScoreK := "Emergency Score truck " & k & ": ";
+	let EScoreK_sum := 0;
+	for{n in 1..4}{
+		for{i in C}{
+			if(u[i,k,n] = 1) then {
+				let EScoreK_sum := EScoreK_sum + (u[i,k,n]*E[i,n]);
+			}
+		}
+	}
+	let EScoreK := EScoreK & EScoreK_sum;
+	print EScoreK > BAN402_Project2_Part_D_2.txt;
+}
+
+print "" > BAN402_Project2_Part_D_2.txt;
+param tripsK symbolic;
+param opcenter symbolic;
+for{k in K}{
+	let tripsK := "Trip for truck " & k & ": ";
+	let opcenter := "Operation Center for truck " & k & ": ";
+	for{n in 1..4}{
+		for{i in C}{
+			if(i in S and x[i,k,n] = 1) then {
+				let opcenter := opcenter & i;
+			}
+			for{j in C}{
+				if(y[k,i,j,n] = 1 and n<4) then {
+					let tripsK := tripsK & "from " & i & " --> " & j & ", ";
+				}
+				else if(y[k,i,j,n] = 1 and n=4) then {
+					let tripsK := tripsK & "from "  & i & " --> " & j;
+				}
+			}	
+		}
+	}
+	print opcenter > BAN402_Project2_Part_D_2.txt;
+	print tripsK > BAN402_Project2_Part_D_2.txt;
+	print "" > BAN402_Project2_Part_D_2.txt;
+}
+

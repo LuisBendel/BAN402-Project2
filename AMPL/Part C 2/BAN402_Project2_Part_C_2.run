@@ -1,0 +1,78 @@
+reset;
+model BAN402_Project2_Part_C_2.mod;
+data BAN402_Project2_Part_C_2.dat;
+
+option solver cplex;
+
+solve;
+
+#display DemandLimit.body, DemandLimit.ub, DemandLimit.slack;
+
+#display DemandLimit.slack['lowqfuel','K1',2];
+
+display z;
+display u;
+display w;
+display f;
+display fl;
+display v;
+
+display IO;
+display IC;
+display IP;
+
+display x;
+display y;
+
+# what is the optimal profit?
+print "The optimal profit is (rounded)" & round(profit) > BAN402_Project2_Part_C_2.txt;
+print "" > BAN402_Project2_Part_C_2.txt;
+
+# when do the CDUs operate and when do they not operate?
+param cdu_operate symbolic;
+param cdu_no_operate symbolic;
+param maintain symbolic;
+for{i in I}{
+	let cdu_operate := i & " operates on day ";
+	let cdu_no_operate := i & " does not operates on day ";
+	let maintain := i & " is maintained on day ";
+	for{t in T:t>0}{
+		if(x[i,t] = 1) then {
+			let cdu_operate := cdu_operate & t & "; ";
+		}
+		else if(x[i,t] = 0) then {
+			let cdu_no_operate := cdu_no_operate & t & "; ";
+		}
+		if(y[i,t] = 1) then {
+			let maintain := maintain & t;
+		}
+	}
+	print cdu_operate > BAN402_Project2_Part_C_2.txt;
+	print cdu_no_operate > BAN402_Project2_Part_C_2.txt;
+	print maintain > BAN402_Project2_Part_C_2.txt;
+}
+print "" > BAN402_Project2_Part_C_2.txt;
+
+# is there unsatisfied demand?
+print "Unsatisfied demand for markets: " > BAN402_Project2_Part_C_2.txt;
+for{p in P}{
+	for{k in K}{
+		for{t in T:t>0}{
+			if(DemandLimit.slack[p,k,t] <> 0) then {
+				print p & " " & k & " " & t & ": " & DemandLimit.slack[p,k,t] > BAN402_Project2_Part_C_2.txt;
+			}
+		}
+	}
+}
+print "" > BAN402_Project2_Part_C_2.txt;
+
+# print a nice output to see how the inventory of crude oil changes
+param IO_output symbolic;
+for{j in J}{
+	print "IO for crude " & j > BAN402_Project2_Part_C_2.txt;
+	for{t in T:t>0}{
+		let IO_output := "IO breakdown for day" & t &  ": " & round(IO[j,t]) & " = [t-1]: " & round(IO[j,t-1]) & ", [+fix]: " & E[j] & ", [-ref]: " & round(sum{i in I}z[j,i,t]);
+		print IO_output > BAN402_Project2_Part_C_2.txt;
+	}
+	print "" > BAN402_Project2_Part_C_2.txt;
+}

@@ -1,0 +1,65 @@
+reset;
+model BAN402_Project2_Part_D_1.mod;
+data BAN402_Project2_Part_D_1.dat;
+
+option solver gurobi;
+
+solve;
+
+display tmin;
+display t;
+display x;
+display y;
+display u;
+
+
+########################## making a nice output ########################################################
+
+print "Total travel time for trucks (incl. loading):" > BAN402_Project2_Part_D_1.txt;
+for{k in K}{
+	print "Truck " & k & ": " & t[k] > BAN402_Project2_Part_D_1.txt;
+}
+print "" > BAN402_Project2_Part_D_1.txt;
+
+print "" > BAN402_Project2_Part_D_1.txt;
+param tripsK symbolic;
+param opcenter symbolic;
+param next symbolic;
+for{k in K}{
+	let tripsK := "Trip for truck " & k & ": ";
+	let opcenter := "Operation Center for truck " & k & ": ";
+	let next := "";
+	for{i in S}{
+		let next := "";
+		if(x[i,k] = 1) then {
+			let opcenter := opcenter & i;
+			for{j in C}{
+				if(y[k,i,j] = 1 and i <> j) then {
+					let tripsK := tripsK & "from " & i & " --> " & j & ", ";
+					let next := j;
+					break;
+				}
+			}
+			
+			for{n in 1..3}{
+				for{j in C}{
+					if(y[k,next,j] > 0.5 and next <> j) then {
+						if(n<3) then {
+							let tripsK := tripsK & "from " & next & " --> " & j & ", ";
+						}
+						else if(n=3) then {
+							let tripsK := tripsK & "from " & next & " --> " & j;
+						}
+						let next := j;
+						break;
+					}
+				}
+			}
+
+		}
+	}
+	
+	print opcenter > BAN402_Project2_Part_D_1.txt;
+	print tripsK > BAN402_Project2_Part_D_1.txt;
+	print "" > BAN402_Project2_Part_D_1.txt;
+}

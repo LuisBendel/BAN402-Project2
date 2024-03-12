@@ -1,0 +1,77 @@
+The optimal profit is (rounded)3825571
+
+CDU1 operates on day 1; 2; 3; 4; 5; 6; 8; 9; 10; 11; 12; 
+CDU1 does not operates on day 7; 
+CDU1 is maintained on day 7
+CDU2 operates on day 1; 2; 3; 4; 5; 6; 7; 8; 9; 10; 
+CDU2 does not operates on day 11; 12; 
+CDU2 is maintained on day 12
+
+5750
+5464.999999999999
+
+Unsatisfied demand for markets: 
+lowqfuel K1 2: 25
+lowqfuel K3 2: 15
+lowqfuel K3 3: 11.444444444444443
+lowqfuel K3 5: 15
+lowqfuel K3 6: 15
+lowqfuel K3 7: 15
+lowqfuel K3 8: 15
+lowqfuel K3 9: 5
+lowqfuel K4 2: 15
+lowqfuel K4 3: 15
+lowqfuel K4 4: 15
+lowqfuel K4 5: 15
+lowqfuel K4 6: 15
+lowqfuel K4 7: 15
+lowqfuel K4 8: 15
+lowqfuel K4 9: 5
+lowqfuel K4 10: 4.84215189873418
+lowqfuel K4 11: 10
+lowqfuel K5 2: 10
+lowqfuel K5 3: 10
+lowqfuel K5 4: 10
+lowqfuel K5 5: 10
+lowqfuel K5 6: 10
+lowqfuel K5 7: 10
+lowqfuel K5 8: 10
+lowqfuel K5 11: 5
+lowqfuel K6 2: 40
+lowqfuel K6 3: 40
+lowqfuel K6 4: 38.235302390998605
+lowqfuel K6 5: 21.931012658227843
+lowqfuel K6 6: 31.072784810126585
+lowqfuel K6 7: 30.072784810126585
+lowqfuel K6 8: 23.867088607594937
+lowqfuel K6 9: 19.584430379746827
+lowqfuel K8 2: 15
+
+IO for crude CrA
+IO breakdown for day1: 264 = [t-1]: 0, [+fix]: 575, [-ref]: 311
+IO breakdown for day2: 0 = [t-1]: 264, [+fix]: 575, [-ref]: 839
+IO breakdown for day3: 0 = [t-1]: 0, [+fix]: 575, [-ref]: 575
+IO breakdown for day4: 0 = [t-1]: 0, [+fix]: 575, [-ref]: 575
+IO breakdown for day5: 0 = [t-1]: 0, [+fix]: 575, [-ref]: 575
+IO breakdown for day6: 32 = [t-1]: 0, [+fix]: 575, [-ref]: 543
+IO breakdown for day7: 466 = [t-1]: 32, [+fix]: 575, [-ref]: 142
+IO breakdown for day8: 295 = [t-1]: 466, [+fix]: 575, [-ref]: 746
+IO breakdown for day9: 0 = [t-1]: 295, [+fix]: 575, [-ref]: 870
+IO breakdown for day10: 0 = [t-1]: 0, [+fix]: 575, [-ref]: 575
+IO breakdown for day11: 575 = [t-1]: 0, [+fix]: 575, [-ref]: 0
+IO breakdown for day12: 1150 = [t-1]: 575, [+fix]: 575, [-ref]: 0
+
+IO for crude CrB
+IO breakdown for day1: 0 = [t-1]: 0, [+fix]: 575, [-ref]: 575
+IO breakdown for day2: 204 = [t-1]: 0, [+fix]: 575, [-ref]: 371
+IO breakdown for day3: 47 = [t-1]: 204, [+fix]: 575, [-ref]: 733
+IO breakdown for day4: 117 = [t-1]: 47, [+fix]: 575, [-ref]: 504
+IO breakdown for day5: 188 = [t-1]: 117, [+fix]: 575, [-ref]: 504
+IO breakdown for day6: 63 = [t-1]: 188, [+fix]: 575, [-ref]: 700
+IO breakdown for day7: 79 = [t-1]: 63, [+fix]: 575, [-ref]: 558
+IO breakdown for day8: 0 = [t-1]: 79, [+fix]: 575, [-ref]: 654
+IO breakdown for day9: 45 = [t-1]: 0, [+fix]: 575, [-ref]: 530
+IO breakdown for day10: 425 = [t-1]: 45, [+fix]: 575, [-ref]: 195
+IO breakdown for day11: 930 = [t-1]: 425, [+fix]: 575, [-ref]: 70
+IO breakdown for day12: 1435 = [t-1]: 930, [+fix]: 575, [-ref]: 70
+

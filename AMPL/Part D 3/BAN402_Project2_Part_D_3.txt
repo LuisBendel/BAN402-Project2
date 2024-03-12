@@ -1,0 +1,198 @@
+
+
+#####################################################################################
+
+Solutions for alpha = 1:
+The minimum required emergency score is 1460
+The achieved emergency score is 1460
+
+The objective value (minimum longest travel time of any truck) is 75.18
+
+Travel time for each truck (incl. loading): 
+Truck 1: 71.3
+Truck 2: 65.7
+Truck 3: 73.12
+Truck 4: 75.18
+
+Emergency Score truck 1: 420
+Emergency Score truck 2: 250
+Emergency Score truck 3: 420
+Emergency Score truck 4: 370
+
+Operation Center for truck 1: S5
+Trip for truck 1: from S5 --> C5, from C5 --> S1, from S1 --> N5, from N5 --> S5
+
+Operation Center for truck 2: C1
+Trip for truck 2: from C1 --> C4, from C4 --> N2, from N2 --> N1, from N1 --> C1
+
+Operation Center for truck 3: S4
+Trip for truck 3: from S4 --> C6, from C6 --> S2, from S2 --> N4, from N4 --> S4
+
+Operation Center for truck 4: C2
+Trip for truck 4: from C2 --> C3, from C3 --> S3, from S3 --> N3, from N3 --> C2
+
+
+
+#####################################################################################
+
+Solutions for alpha = 0.95:
+The minimum required emergency score is 1387
+The achieved emergency score is 1390
+
+The objective value (minimum longest travel time of any truck) is 61.18
+
+Travel time for each truck (incl. loading): 
+Truck 1: 61.02
+Truck 2: 60.36
+Truck 3: 61.18
+Truck 4: 44.12
+
+Emergency Score truck 1: 480
+Emergency Score truck 2: 250
+Emergency Score truck 3: 250
+Emergency Score truck 4: 410
+
+Operation Center for truck 1: S5
+Trip for truck 1: from S5 --> S3, from S3 --> S1, from S1 --> N5, from N5 --> S5
+
+Operation Center for truck 2: C1
+Trip for truck 2: from C1 --> C4, from C4 --> N1, from N1 --> N4, from N4 --> C1
+
+Operation Center for truck 3: C2
+Trip for truck 3: from C2 --> C3, from C3 --> N3, from N3 --> N2, from N2 --> C2
+
+Operation Center for truck 4: S4
+Trip for truck 4: from S4 --> S2, from S2 --> C6, from C6 --> C5, from C5 --> S4
+
+
+
+#####################################################################################
+
+Solutions for alpha = 0.9:
+The minimum required emergency score is 1314
+The achieved emergency score is 1340
+
+The objective value (minimum longest travel time of any truck) is 55.14
+
+Travel time for each truck (incl. loading): 
+Truck 1: 42.24
+Truck 2: 55.14
+Truck 3: 49.6
+Truck 4: 54.44
+
+Emergency Score truck 1: 300
+Emergency Score truck 2: 410
+Emergency Score truck 3: 480
+Emergency Score truck 4: 150
+
+Operation Center for truck 1: C2
+Trip for truck 1: from C2 --> C5, from C5 --> C3, from C3 --> N4, from N4 --> C2
+
+Operation Center for truck 2: S4
+Trip for truck 2: from S4 --> S1, from S1 --> C6, from C6 --> N5, from N5 --> S4
+
+Operation Center for truck 3: S5
+Trip for truck 3: from S5 --> S3, from S3 --> S2, from S2 --> C4, from C4 --> S5
+
+Operation Center for truck 4: C1
+Trip for truck 4: from C1 --> N1, from N1 --> N2, from N2 --> N3, from N3 --> C1
+
+
+
+#####################################################################################
+
+Solutions for alpha = 0.85:
+The minimum required emergency score is 1241
+The achieved emergency score is 1300
+
+The objective value (minimum longest travel time of any truck) is 53.04
+
+Travel time for each truck (incl. loading): 
+Truck 1: 52.62
+Truck 2: 51.98
+Truck 3: 53.04
+Truck 4: 48.04
+
+Emergency Score truck 1: 420
+Emergency Score truck 2: 250
+Emergency Score truck 3: 150
+Emergency Score truck 4: 480
+
+Operation Center for truck 1: S4
+Trip for truck 1: from S4 --> C5, from C5 --> S1, from S1 --> C4, from C4 --> S4
+
+Operation Center for truck 2: C2
+Trip for truck 2: from C2 --> C3, from C3 --> N3, from N3 --> N4, from N4 --> C2
+
+Operation Center for truck 3: C1
+Trip for truck 3: from C1 --> N2, from N2 --> N1, from N1 --> N5, from N5 --> C1
+
+Operation Center for truck 4: S2
+Trip for truck 4: from S2 --> S5, from S5 --> S3, from S3 --> C6, from C6 --> S2
+
+
+
+#####################################################################################
+
+Solutions for alpha = 0.8:
+The minimum required emergency score is 1168
+The achieved emergency score is 1190
+
+The objective value (minimum longest travel time of any truck) is 50.88
+
+Travel time for each truck (incl. loading): 
+Truck 1: 50.88
+Truck 2: 41.02
+Truck 3: 43.62
+Truck 4: 48.04
+
+Emergency Score truck 1: 0
+Emergency Score truck 2: 300
+Emergency Score truck 3: 410
+Emergency Score truck 4: 480
+
+Operation Center for truck 1: N1
+Trip for truck 1: from N1 --> N2, from N2 --> N3, from N3 --> N4, from N4 --> N1
+
+Operation Center for truck 2: C2
+Trip for truck 2: from C2 --> C3, from C3 --> C1, from C1 --> N5, from N5 --> C2
+
+Operation Center for truck 3: S4
+Trip for truck 3: from S4 --> S1, from S1 --> C5, from C5 --> C4, from C4 --> S4
+
+Operation Center for truck 4: S2
+Trip for truck 4: from S2 --> S5, from S5 --> S3, from S3 --> C6, from C6 --> S2
+
+
+
+#####################################################################################
+
+Solutions for alpha = 0.75:
+The minimum required emergency score is 1095
+The achieved emergency score is 1190
+
+The objective value (minimum longest travel time of any truck) is 50.88
+
+Travel time for each truck (incl. loading): 
+Truck 1: 50.88
+Truck 2: 41.02
+Truck 3: 43.62
+Truck 4: 48.04
+
+Emergency Score truck 1: 0
+Emergency Score truck 2: 300
+Emergency Score truck 3: 410
+Emergency Score truck 4: 480
+
+Operation Center for truck 1: N1
+Trip for truck 1: from N1 --> N2, from N2 --> N3, from N3 --> N4, from N4 --> N1
+
+Operation Center for truck 2: C2
+Trip for truck 2: from C2 --> C3, from C3 --> C1, from C1 --> N5, from N5 --> C2
+
+Operation Center for truck 3: S4
+Trip for truck 3: from S4 --> S1, from S1 --> C5, from C5 --> C4, from C4 --> S4
+
+Operation Center for truck 4: S2
+Trip for truck 4: from S2 --> S5, from S5 --> S3, from S3 --> C6, from C6 --> S2
+
